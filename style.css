@@ -1,0 +1,38 @@
+div {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: translate(5em, 10em);
+  animation-name: example;
+  animation-duration: 5s;
+  position: relative;
+  animation-iteration-count: 4;
+}
+
+@keyframes example{
+    0%{
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+    25%{
+        background-color: green;
+        left: 10em;
+        top: 0;
+    }
+    50%{
+        left: 10em;
+        top: 5em;
+    }
+    75%{
+        background-color: blue;
+        top: 5em;
+        left: 0;
+    }
+    100%{
+        background-color: aqua;
+        left: 0;
+        top: 0;
+    }
+}
