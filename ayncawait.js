@@ -62,9 +62,21 @@
 //   // Call the async function
 //   fetchDataAndProcess();
 
-const promise = new Promise(function (resolve, reject) {
-  reject("reject");
-  resolve("resolve");
-});
+// const promise = new Promise(function (resolve, reject) {
+//   reject("reject");
+//   resolve("resolve");
+// });
 
-promise.then((value) => console.log(value)).then((value)=>console.log(value)).catch((value)=>console.log(value))
+// promise.then((value) => console.log(value)).then((value)=>console.log(value)).catch((value)=>console.log(value))
+
+async function add(a, b) {
+  return Promise.resolve(a + b);
+}
+
+// console.log(x);
+async function get() {
+  const x = await add(8, 9);
+  console.log(x);
+}
+
+get();

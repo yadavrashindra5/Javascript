@@ -1,5 +1,15 @@
-function callEvent(e){
-  console.log(e);
-}
+const keydown = () => {
+  console.log("keydown");
+};
 
-document.addEventListener("keydown",(e)=>callEvent(e))
+const keyup = () => {
+  console.log("keyup");
+};
+
+const keypress = () => {
+  console.log("keypress");
+};
+
+document.addEventListener("keydown", keydown);
+document.addEventListener("keyup", keyup);
+document.addEventListener("keypress", keypress);

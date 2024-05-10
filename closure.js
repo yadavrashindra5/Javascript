@@ -7,13 +7,19 @@
 // }
 // x();
 
+// Hoisting
 
-function add(a,b){
-  function substract(){
-    return a-b;
+//declare
+//initialize
+//access
+
+//Closure
+
+function x() {
+  for (var i = 1; i <= 5; i++) {
+    setTimeout(function () {
+      console.log(i);
+    }, i * 1000);
   }
-  return substract;
 }
-
-const fun=add(5,3);
-console.log(fun());
+x();
