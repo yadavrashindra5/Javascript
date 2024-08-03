@@ -70,57 +70,25 @@
 // }
 // const grow = add();
 
-const a = [];
-const b = [];
-const c = [];
-const d = [];
-const e = [];
-const f = [];
-const g = [];
-const h = [];
-let i=99999;
-function grow() {
-  for (let i = 0; i < 99999; ++i) {
-    a.push(undefined);
-    b.push(undefined);
-    c.push(undefined);
-    d.push(undefined);
-    e.push(undefined);
-    f.push(undefined);
-    g.push(undefined);
-    h.push(undefined);
-  }
-  a.push("Hello");
-  b.push("Hello");
-  c.push("Hello");
-  d.push("Hello");
-  e.push("Hello");
-  f.push("Hello");
-  g.push("Hello");
-  h.push("Hello");
-  // a[99999999] = "Hello";
-  // b[99999999] = "Hello";
-  // c[99999999] = "Hello";
-  // d[99999999] = "Hello";
-  // e[99999999] = "Hello";
-  // f[99999999] = "Hello";
-  // g[99999999] = "Hello";
-  // h[99999999] = "Hello";
+// a[99999999] = "Hello";
+// b[99999999] = "Hello";
+// c[99999999] = "Hello";
+// d[99999999] = "Hello";
+// e[99999999] = "Hello";
+// f[99999999] = "Hello";
+// g[99999999] = "Hello";
+// h[99999999] = "Hello";
 
-  // a[i] = "Hello";
-  // b[i] = "Hello";
-  // c[i] = "Hello";
-  // d[i] = "Hello";
-  // e[i] = "Hello";
-  // f[i] = "Hello";
-  // g[i] = "Hello";
-  // h[i] = "Hello";
-  i+=i;
-}
+// a[i] = "Hello";
+// b[i] = "Hello";
+// c[i] = "Hello";
+// d[i] = "Hello";
+// e[i] = "Hello";
+// f[i] = "Hello";
+// g[i] = "Hello";
+// h[i] = "Hello";
 
-
-
-document.getElementById("grow").addEventListener("click", grow);
+// document.getElementById("grow").addEventListener("click", grow);
 
 // function outerFunction() {
 //   let outerVariable = "Hello";

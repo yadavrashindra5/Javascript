@@ -69,14 +69,46 @@
 
 // promise.then((value) => console.log(value)).then((value)=>console.log(value)).catch((value)=>console.log(value))
 
-async function add(a, b) {
-  return Promise.resolve(a + b);
+// async function add(a, b) {
+//   return Promise.resolve(a + b);
+// }
+
+// // console.log(x);
+// async function get() {
+//   const x = await add(8, 9);
+//   console.log(x);
+// }
+
+// get();
+
+// Does async await block javascript Main thread?
+
+// async function getUserData() {
+//   let response1 = await fetch("https://jsonplaceholder.typicode.com/users");
+//   let response2 = await fetch("https://jsonplaceholder.typicode.com/users");
+//   let response3 = await fetch("https://jsonplaceholder.typicode.com/users");
+//   console.log("inside");
+// }
+// getUserData();
+
+// console.log("Hi");
+// console.log("Hello");
+
+/**
+ * what is async?
+ * what is await?
+ * How async await works behind the scenes?
+ * Example of using async/await
+ * Error Handling
+ * Interviews
+ * Async await vs Promise.then/.catch
+ *
+ */
+
+//always returns a promise
+async function getData() {
+  return "Namaste";
 }
 
-// console.log(x);
-async function get() {
-  const x = await add(8, 9);
-  console.log(x);
-}
-
-get();
+const data = getData();
+console.log(data);

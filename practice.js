@@ -239,8 +239,34 @@
 //     console.log("Success 4");
 //   });
 
-try {
-  throw "eroor";
-} catch (e) {
-  console.log(e);
-}
+// try {
+//   throw "eroor";
+// } catch (e) {
+//   console.log(e);
+// }
+
+// class Promisex {
+//   constructor(callback) {
+//     callback();
+//   }
+// }
+
+// const x = new Promisex((resolve, reject) => {
+//   console.log("Hello world");
+// });
+
+// const promise = new Promise((resolve, reject) => {
+//   reject("Rejected");
+//   console.log("resolve,reject");
+// });
+
+// promise
+//   .then((resolveData) => {
+//     console.log(resolveData);
+//   })
+//   .catch((rejectData) => {
+//     console.log(rejectData);
+//   });
+
+// console.log(promise);
+

@@ -42,26 +42,24 @@
 //     console.log("reject");
 //   });
 
-function callback(resolve, reject) {
-  resolve();
-}
+// function callback(resolve, reject) {
+//   resolve();
+// }
 
-function resolve() {
-  console.log("resolve", this);
-}
+// function resolve() {
+//   console.log("resolve", this);
+// }
 
-function reject() {
-  console.log("reject", this);
-}
+// function reject() {
+//   console.log("reject", this);
+// }
 
 class Student {
-  constructor(callback) {
-    console.log(this);
-    callback.call(this);
-  }
-  resolve() {
-    console.log("resolve");
+  static name = "Rashindrda";
+  getName() {
+    return Student.name;
   }
 }
 
-const student = new Student(callback);
+const s1 = new Student();
+console.log(s1);

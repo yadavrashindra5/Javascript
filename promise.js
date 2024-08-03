@@ -48,32 +48,32 @@
 
 // console.log("Hi")
 
-function first() {
-  return Promise.resolve(1);
-}
+// function first() {
+//   return Promise.resolve(1);
+// }
 
-function second(value) {
-  return "Hello world";
-}
+// function second(value) {
+//   return "Hello world";
+// }
 
-first()
-  .then((valueOne) => Promise.reject("Hi"))
-  .then((valueTwo) => console.log(valueTwo))
-  .catch((value) => "Reject")
-  .then((value) => console.log(value));
+// first()
+//   .then((valueOne) => Promise.reject("Hi"))
+//   .then((valueTwo) => console.log(valueTwo))
+//   .catch((value) => "Reject")
+//   .then((value) => console.log(value));
 
-// promiseHooks.then(())
-// .catch(())
+// // promiseHooks.then(())
+// // .catch(())
 
-function first() {
-  throw new Error("Okay, I am an error");
-  return Promise.resolve(1);
-}
+// function first() {
+//   throw new Error("Okay, I am an error");
+//   return Promise.resolve(1);
+// }
 
-try {
-  first()
-    .then((value) => console.log(value))
-    .catch((error) => console.log("error", error));
-} catch (error) {
-  console.log(error, "outside");
-}
+// try {
+//   first()
+//     .then((value) => console.log(value))
+//     .catch((error) => console.log("error", error));
+// } catch (error) {
+//   console.log(error, "outside");
+// }
