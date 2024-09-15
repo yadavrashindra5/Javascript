@@ -19,7 +19,7 @@ const promise1 = new Promise((resolve, reject) => {
   const even = arr.filter((data) => data % 2 == 0);
   setTimeout(() => {
     resolve(even);
-  });
+  }, 10000);
 });
 
 const promise2 = new Promise((resolve, reject) => {
@@ -38,4 +38,6 @@ const promise3 = new Promise((resolve, reject) => {
 // promise2.then((data) => console.log(data));
 // promise3.then((data) => console.log(data));
 
+
 Promise.all([promise1, promise2, promise3]).then((data) => console.log(data));
+

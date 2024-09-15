@@ -1,3 +1,10 @@
+/**
+ *
+ * call the function immediately
+ * stop the function from execution for certain period of time
+ * call the function again after time period is passed
+ */
+
 function fun() {
   console.log("This is a function");
 }

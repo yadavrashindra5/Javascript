@@ -11,7 +11,6 @@
 // }
 // x();
 
-
 // const person={
 //     name:"rashindra",
 //     address:"Janakpur",
@@ -29,7 +28,7 @@
 //         console.log(this);
 //         function add(){
 //             console.log(this);
-//         }        
+//         }
 //         add();
 //     }
 // }
@@ -52,16 +51,16 @@
 // add();
 // addx();
 
-const object={
-    name:"rashindra",
-    address:"janakpur",
-    getName:function (){
-        console.log(this);
-    },
-    getAddress:()=>{
+const object = {
+  name: "rashindra",
+  address: "janakpur",
+  getName: function () {
     console.log(this);
-    }
-}
+  },
+  getAddress: () => {
+    console.log(this);
+  },
+};
 
 object.getName();
 object.getAddress();

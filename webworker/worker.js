@@ -1,8 +1,26 @@
-// self.addEventListener("message", (e) => {
-//   console.log("HI How are your", e.data);
-// });
-onmessage = function (e) {
-  console.log("HI How are your", e);
-};
+// worker.js
+self.onmessage = function (e) {
+  const numbers = e.data;
 
-self.postMessage("I completed the task");
+  console.log("Worker started processing at:", new Date().toLocaleTimeString());
+
+  let sum = 0;
+
+  //   console.time("time");
+  // Perform a CPU-intensive task
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = 0; j < 1000; ++j) {
+      sum += numbers[i];
+    }
+  }
+  //   console.timeEnd("time");
+  console.log(
+    "Worker finished processing at:",
+    new Date().toLocaleTimeString(),
+    "Sum:",
+    sum
+  );
+
+  // Send the result back to the main thread
+  self.postMessage(sum);
+};
