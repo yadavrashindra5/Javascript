@@ -60,23 +60,3 @@ const debounceFun = (callback, delay) => {
 //     console.log("debounce function");
 //   }, 1000)
 // );
-
-const throttleFunction = (callback, delay) => {
-  let timeout = null;
-  return () => {
-    if (!timeout) {
-      callback();
-      timeout = setTimeout(() => {
-        clearTimeout(timeout);
-        timeout = null;
-      }, delay);
-    }
-  };
-};
-
-document.addEventListener(
-  "mousemove",
-  throttleFunction(() => {
-    console.log("throttle funcgtion");
-  }, 1000)
-);
