@@ -60,3 +60,47 @@ const debounceFun = (callback, delay) => {
 //     console.log("debounce function");
 //   }, 1000)
 // );
+
+//1000
+// function debounceFunction() {
+//   console.log("debouceFunction");
+// }
+
+// function debounce(callback, timer) {
+//   let timeout = null;
+//   return () => {
+//     if (timeout) {
+//       clearTimeout(timeout);
+//       timeout = null;
+//     }
+//     timeout = setTimeout(() => {
+//       callback();
+//     }, timer);
+//   };
+// }
+
+// document.addEventListener("mousemove", debounce(debounceFunction, 1000));
+
+//throttle
+
+//call function immediately
+//delay
+
+function throttleFunction() {
+  console.log("debouceFunction");
+}
+
+function throttle(callback, delay) {
+  let timer = null;
+  return () => {
+    if (!timer) {
+      callback();
+      timer = setTimeout(() => {
+        clearTimeout(timer);
+        timer = null;
+      }, delay);
+    }
+  };
+}
+
+document.addEventListener("mousemove", throttle(throttleFunction, 5000));

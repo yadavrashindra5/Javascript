@@ -1,47 +1,85 @@
-// function Person(name) {
-//   this.name = name;
-//   this.getName = function () {
-//     return this.name;
-//   };
-// }
+// const largeArray = new Array(1e6).fill(0).map((_, i) => i);
 
-// Person.prototype.setName = function (name) {
-//   this.name = name;
+// const processBatch = async (batch) => {
+//   const promise = batch.map((item) => {
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve(`processed item ${item}`);
+//       }, 2000);
+//     });
+//   });
+//   return Promise.all(promise);
 // };
 
-// const x = new Person();
-// console.log(x);
+// const processLargeArray = async (array, batchSize) => {
+//   for (let i = 0; i < array.length; i += batchSize) {
+//     const batch = array.slice(i, i + batchSize);
+//     try {
+//       console.log("HI");
+//       const results = await processBatch(batch);
+//       // console.log(`Batch ${i / batchSize + 1} results:`, results);
+//     } catch (error) {
+//       console.error(`Error processing batch ${i / batchSize + 1}:`, error);
+//     }
+//   }
+// };
 
-function parseTimeRange(timeRange) {
-  // Split the string on ' --> ' to separate start and end times
-  const [startTime, endTime] = timeRange
-    .split(" --> ")
-    .map((time) => time.trim());
+// processLargeArray(largeArray, 1000);
 
-  // Function to convert time (00:00:00.000) to an object with hours, minutes, seconds, and milliseconds
-  function parseTime(time) {
-    const [hours, minutes, secondsAndMilliseconds] = time.split(":");
-    const [seconds, milliseconds] = secondsAndMilliseconds.split(".");
+// const arr = [1, 0, 1, 0, 1, 0];
+// let i = 0,
+//   j = arr.length - 1;
+// while (i < j) {
+//   if (arr[i] == 0) {
+//     i++;
+//   } else if (arr[j] == 1) {
+//     j--;
+//   } else {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     i++;
+//     j--;
+//   }
+// }
 
-    return {
-      hours: parseInt(hours, 10),
-      minutes: parseInt(minutes, 10),
-      seconds: parseInt(seconds, 10),
-      milliseconds: parseInt(milliseconds, 10),
+// console.log(arr);
+
+//three states
+//state=fulfill
+//pending
+//
+//G
+
+// const p = new Promise((resolve, reject) => {
+//   console.log("hello1");
+//   setTimeout(() => {
+//     console.log("Hello4");
+//     resolve("helllo");
+//     console.log("Hello5");
+//   }, 2000);
+//   console.log("Hello2");
+// });
+
+// p.then((data) => {
+//   console.log(data);
+// }).catch(() => {
+//   console.log("hello");
+// });
+
+// console.log("Hi");
+
+const obj = {
+  name: "primathon",
+  normal: function () {
+    return () => {
+      console.log(this);
     };
-  }
+  },
+  arrow: () => {
+    console.log(this);
+  },
+};
 
-  // Parse the start and end times
-  const start = parseTime(startTime);
-  const end = parseTime(endTime);
-
-  return {
-    start,
-    end,
-  };
-}
-
-// Example usage
-const timeRange = "00:00:00.000 --> 00:00:04.200";
-const parsedTimeRange = parseTimeRange(timeRange);
-console.log(parsedTimeRange);
+const x = obj.normal();
+x();
