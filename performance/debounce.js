@@ -17,6 +17,6 @@ const returnFunc = debounce(fun, 1000);
 
 document.getElementById("hello").addEventListener("input", () => returnFunc());
 
-document
-  .getElementById("button")
-  .addEventListener("click", () => console.log("click"));
+// document
+//   .getElementById("button")
+//   .addEventListener("click", () => console.log("click"));
