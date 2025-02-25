@@ -1,0 +1,34 @@
+# JS Topics
+
+- Data type
+- Hoisting
+- Scope
+- Closure
+- Regular Function
+- Arrow Function
+- Function Expression
+- Named Function
+- Difference between == and ===
+- Type coercion
+- Shallow and Deep Copy
+- behavior of this keyword in JS
+- Explicit Binding (`call` `apply` and `bind`)
+- Promise
+- try,catch and finally
+- async and await
+- How event loop work
+- constructor function
+- Errors and It's types
+- Events and How to create custom events
+- Prototype
+- What is the difference between **proto** and prototype
+- Generator Function
+- Iterator
+- Memoizing
+- Debouncing and How to implement it
+- Throttling and How to implement it
+- Currying
+- How to implement currying
+- How to implement infinite currying
+- WebWorker
+-

@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/immer"></script>
-    <!-- <script src="practice.js"></script> -->
     <style>
       div {
         min-width: 100px;
@@ -19,12 +15,11 @@
     </style>
   </head>
   <body>
-    <main id="main">
-      <button id="click" style="border: 1px solid red; font-size: 30px">
-        click
-      </button>
-    </main>
-
+    <div id="grandparent">
+      <div id="parent">
+        <div id="child"></div>
+      </div>
+    </div>
     <script src="practice.js"></script>
   </body>
 </html>
